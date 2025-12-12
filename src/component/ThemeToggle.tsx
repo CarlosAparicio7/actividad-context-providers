@@ -1,4 +1,3 @@
-
 export default function ThemeToggle() {
     // TODO
     //const { theme, toggleTheme } = useTheme();
@@ -11,6 +10,10 @@ export default function ThemeToggle() {
     /* --------------------------- */
 
     const label = theme === "light" ? "🌞 Light" : "🌙 Dark";
+
+    if(label==="🌞 Light"){
+        
+    }
 
     return (
         <button
