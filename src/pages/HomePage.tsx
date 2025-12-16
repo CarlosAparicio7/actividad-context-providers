@@ -1,5 +1,5 @@
-import es from "../locales/es.json";
 import en from "../locales/en.json";
+import es from "../locales/es.json";
 const translations = { es, en } as const;
 export default function HomePage() {
     // TODO
@@ -8,7 +8,7 @@ export default function HomePage() {
     const logout = ()=>{
         console.log(`Eliminando autenticación`);
     }
-    const user = {name:"John Doe"};
+    const user = {name:"Carlos Aparicio"};
 
     // Eliminar
     const language = "en";
