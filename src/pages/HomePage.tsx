@@ -1,21 +1,19 @@
-import en from "../locales/en.json";
-import es from "../locales/es.json";
-const translations = { es, en } as const;
+import { useLanguage } from "../context/LanguageContext";
+
 export default function HomePage() {
     // TODO
     //const {user, logout} = useAuth();
     /* --------------------------- */
+
+    const { t } = useLanguage();
+
     const logout = ()=>{
         console.log(`Eliminando autenticación`);
     }
     const user = {name:"Carlos Aparicio"};
 
     // Eliminar
-    const language = "en";
-    const t = (key:string):string => {
-        // @ts-ignore
-        return translations[language][key];
-    }
+
     /* --------------------------- */
     const name = user?.name ?? "Usuario";
 
@@ -37,36 +35,36 @@ export default function HomePage() {
             <section className="grid gap-4 md:grid-cols-3 text-sm">
                 <article
                     className="p-4 rounded-xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-600">
-                    <h3 className="font-semibold mb-1">Listado de alumnos</h3>
+                    <h3 className="font-semibold mb-1">{t("studentsTitle")}</h3>
                     <p className="text-xs text-slate-600 dark:text-slate-300 mb-3">
-                        Consulta y gestiona la información básica de tus alumnos.
+                        {t("studentsDesc")}
                     </p>
                     <button
                         className="px-3 py-1 rounded-md bg-emerald-600 text-white text-xs font-medium hover:bg-emerald-700">
-                        Ir al listado
+                        {t("studentsBtn")}
                     </button>
                 </article>
 
                 <article
                     className="p-4 rounded-xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-600">
-                    <h3 className="font-semibold mb-1">Asistencia</h3>
+                    <h3 className="font-semibold mb-1">{t("attendanceTitle")}</h3>
                     <p className="text-xs text-slate-600 dark:text-slate-300 mb-3">
-                        Marca la asistencia diaria de los grupos.
+                        {t("attendanceDesc")}
                     </p>
                     <button className="px-3 py-1 rounded-md bg-sky-600 text-white text-xs font-medium hover:bg-sky-700">
-                        Abrir asistencia
+                        {t("attendanceBtn")}
                     </button>
                 </article>
 
                 <article
                     className="p-4 rounded-xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-600">
-                    <h3 className="font-semibold mb-1">Configuración</h3>
+                    <h3 className="font-semibold mb-1">{t("settingsTitle")}</h3>
                     <p className="text-xs text-slate-600 dark:text-slate-300 mb-3">
-                        Ajusta opciones de idioma, tema y perfil.
+                        {t("settingsDesc")}
                     </p>
                     <button
                         className="px-3 py-1 rounded-md bg-slate-700 text-white text-xs font-medium hover:bg-slate-800">
-                        Ver configuración
+                        {t("settingsBtn")}
                     </button>
                 </article>
             </section>

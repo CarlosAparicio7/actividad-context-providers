@@ -7,5 +7,15 @@
   "loginButton": "Entrar",
   "homeWelcome": "Bienvenido,",
   "homeDescription": "Este es el panel de inicio. Desde aquí puedes acceder a las secciones de alumnos.",
-  "logoutButton": "Cerrar sesión"
+  "logoutButton": "Cerrar sesión",
+  
+  "studentsTitle": "Listado de alumnos",
+  "studentsDesc": "Consulta y gestiona la información básica de tus alumnos.",
+  "studentsBtn": "Ir al listado",
+  "attendanceTitle": "Asistencia",
+  "attendanceDesc": "Marca la asistencia diaria de los grupos.",
+  "attendanceBtn": "Abrir asistencia",
+  "settingsTitle": "Configuración",
+  "settingsDesc": "Ajusta opciones de idioma, tema y perfil.",
+  "settingsBtn": "Ver configuración"
 }

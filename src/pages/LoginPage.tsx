@@ -1,13 +1,14 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
-import es from "../locales/es.json";
-import en from "../locales/en.json";
-const translations = { es, en } as const;
 export type Language = "es" | "en";
 
 export default function LoginPage() {
     // TODO
     //const {login} = useAuth();
+
+    const { t } = useLanguage();
+
     const login = (username:string)=>{
         console.log(`Autenticado comom ${username}`);
     }
@@ -15,11 +16,7 @@ export default function LoginPage() {
     //const {t} = useLanguage();
     /* --------------------------- */
     // Eliminar
-    const language:Language = "es";
-    const t = (key:string):string => {
-        // @ts-ignore
-        return translations[language][key];
-    }
+
     /* --------------------------- */
 
 

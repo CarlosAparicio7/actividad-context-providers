@@ -7,5 +7,15 @@
   "loginButton": "Sign in",
   "homeWelcome": "Welcome,",
   "homeDescription": "This is the home panel. From here you can access students sections.",
-  "logoutButton": "Log out"
+  "logoutButton": "Log out",
+
+  "studentsTitle": "Student List",
+  "studentsDesc": "Consult and manage basic information of your students.",
+  "studentsBtn": "Go to list",
+  "attendanceTitle": "Attendance",
+  "attendanceDesc": "Mark daily attendance for groups.",
+  "attendanceBtn": "Open attendance",
+  "settingsTitle": "Settings",
+  "settingsDesc": "Adjust language, theme, and profile options.",
+  "settingsBtn": "View settings"
 }
