@@ -1,16 +1,13 @@
+import { useAuth } from "@/context/AuthContext";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function HomePage() {
     // TODO
-    //const {user, logout} = useAuth();
+    const {user, logout} = useAuth();
     /* --------------------------- */
 
     const { t } = useLanguage();
 
-    const logout = ()=>{
-        console.log(`Eliminando autenticación`);
-    }
-    const user = {name:"Carlos Aparicio"};
 
     // Eliminar
 

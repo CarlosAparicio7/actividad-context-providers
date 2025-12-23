@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import { useAuth } from "@/context/AuthContext";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 
 export type Language = "es" | "en";
 
 export default function LoginPage() {
     // TODO
-    //const {login} = useAuth();
+    const {login, user} = useAuth();
 
     const { t } = useLanguage();
 
-    const login = (username:string)=>{
-        console.log(`Autenticado comom ${username}`);
-    }
+    const navigate = useNavigate();
 
     //const {t} = useLanguage();
     /* --------------------------- */
@@ -21,6 +21,12 @@ export default function LoginPage() {
 
 
     const [name, setName] = useState("");
+
+    useEffect(() => {
+        if (user) {
+            navigate("/");
+        }
+    }, [user, navigate]);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
